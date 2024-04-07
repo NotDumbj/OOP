@@ -43,15 +43,13 @@ public class Task_1 {
 	}
 	
 	public void removeBook(String bookn) {
-	    ArrayList<Book> booksToRemove = new ArrayList<>();
-
+	    Book booktoremove = new Book();
 	    for (Book book : inventory) {
 	        if (book.getTitle().equalsIgnoreCase(bookn)) {
-	            booksToRemove.add(book);
+	        	booktoremove = book;
 	        }
 	    }
-
-	    inventory.removeAll(booksToRemove);
+	    inventory.remove(booktoremove);
 	}
 
 	
