@@ -1,0 +1,4 @@
+Maths, Prof. Hafeez, 99.9, 5, 
+Physics, Sir Rizwan, 132.0, 6, 
+English, Sir Shan Masood, 35.2, 5, 
+Magic, M. Asif, 399.9, 8, 
