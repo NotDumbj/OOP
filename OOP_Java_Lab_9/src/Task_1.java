@@ -13,11 +13,11 @@ public class Task_1 {
 		inventory.add(book);
 	}
 	
-	public void updateBook(Book book)
+	public void updateBook(String bookn)
 	{
 		for(Book BoOk : inventory)
 		{
-			if(BoOk == book)
+			if(BoOk.getTitle().equalsIgnoreCase(bookn))
 			{
 				Scanner updbok = new Scanner(System.in);
 				System.out.println("Enter New Price: ");
@@ -34,28 +34,31 @@ public class Task_1 {
 				} catch(Exception e) {
 					e.printStackTrace();
 				}
-				book.setPrice(p);
-				book.setQuantity(q);
+				BoOk.setPrice(p);
+				BoOk.setQuantity(q);
 				System.out.println("Price and Quantity Updated for Book " + BoOk.getTitle());
 				updbok.close();
 			}
 		}
 	}
 	
-	public void removeBook(Book book) {
-		for(Book BoOk : inventory)
-		{
-			if(BoOk == book)
-			{
-				inventory.remove(BoOk);
-			}
-		}		
+	public void removeBook(String bookn) {
+	    ArrayList<Book> booksToRemove = new ArrayList<>();
+
+	    for (Book book : inventory) {
+	        if (book.getTitle().equalsIgnoreCase(bookn)) {
+	            booksToRemove.add(book);
+	        }
+	    }
+
+	    inventory.removeAll(booksToRemove);
 	}
+
 	
-	public void searchBook(Book book) {
+	public void searchBook(String bookn) {
 		for(Book BoOk : inventory)
 		{
-			if(BoOk == book)
+			if(BoOk.getTitle().equalsIgnoreCase(bookn))
 			{
 				BoOk.displayDetails();
 			}
@@ -193,22 +196,31 @@ public class Task_1 {
 		//Commented the Manual Implementation
 		
 		Task_1 task = new Task_1();
-		//Task_1.Book book1 = task.new Book("Maths", "Prof. Hafeez", 99.9 , 5);
+		Task_1.Book book1 = task.new Book("Maths", "Prof. Hafeez", 99.9 , 5);
 		//Task_1.Book book2 = task.new Book("Physics", "Sir Rizwan", 132 , 6);
 		//Task_1.Book book3 = task.new Book("English", "Sir Shan Masood", 35.2 , 5);
 		//Task_1.Book book4 = task.new Book("Magic", "M. Asif", 399.9 , 8);
 		
 		task.LoadfromFile();
 	
-		//task.addBook(book1);
+		task.addBook(book1);
 		//task.addBook(book2);
 		//task.addBook(book3);
 		//task.addBook(book4);
 		
 		task.displayallBooks();
-				
+		
+		task.removeBook("Maths");
+		
+		task.displayallBooks();
+		
+		task.updateBook("Physics");
+		
+		task.displayallBooks();
+		
+		task.searchBook("Magic");
 		//book1.displayDetails();
-		System.out.println("Hello Sir");
+		//System.out.println("Hello Sir");
 		
 		task.SavetoFile();
 		
