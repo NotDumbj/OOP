@@ -1,0 +1,49 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root {
+	-fx-background-color : black;
+}
+
+ScrollPane {
+	-fx-background-color : black;
+	-fx-max-height : 120px;
+}
+
+VBox {
+    -fx-alignment: center;
+    -fx-background-color : black;
+}
+
+.lab{
+	-fx-max-width : 500px;
+	-fx-border-color: white;
+	-fx-border-width : 2px, 2px, 2px, 2px;
+}
+
+.labchild {
+	-fx-background-color : black;
+}
+
+Button,  TextField, Label{
+	-fx-padding : 5;
+	-fx-text-fill : white;
+	-fx-background-color : black;
+} 
+
+Button{
+	-fx-background-color : black;
+	-fx-border-color : purple; 
+	-fx-pref-width : 150px;
+}
+
+TextField, DatePicker{
+    -fx-max-width: 220px; /* Set the maximum width */
+    -fx-text-fill : black;
+    -fx-min-width: 100px; /* Set the minimum width */
+}
+
+TextField{
+	-fx-padding : 5;
+	-fx-text-fill : black;
+	-fx-background-color : white;
+} 
