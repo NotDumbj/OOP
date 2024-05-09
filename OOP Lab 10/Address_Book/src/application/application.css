@@ -1,0 +1,12 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.label {
+	-fx-font-size : 20px;
+	-fx-color: #0000FF;
+	-fx-text-fill : #00A0FF;
+}
+
+.heading {
+	-fx-font-size : 45px;
+	-fx-text-fill : black;
+	-fx-font-weight : bold;
+}
