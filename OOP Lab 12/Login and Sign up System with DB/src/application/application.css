@@ -1,0 +1,39 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#HeadingContainer {
+	-fx-background-color : black;
+}
+
+#downhbox {
+	-fx-pref-height : 800px;	
+}	
+
+#leftvboxlogin {
+	-fx-background-color : lightpink;
+}
+#logincontainer {
+	-fx-background-color : lightblue;
+}
+
+.buttonls {
+	-fx-background-color : black; 
+}
+
+.buttonls:hover {
+	-fx-opacity : .5;
+}
+
+#loginboxxx{
+	-fx-background-color: derive(#FFFFF0, 20%);
+	-fx-border-radius: 10px;
+	-fx-border-width : 2px;
+	-fx-border-color: black;
+}
+
+#formchangerlogin:hover {
+	-fx-underline: true;
+}
+
+#formchangersignup:hover {
+	-fx-underline: true;
+}
