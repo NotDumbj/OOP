@@ -1,0 +1,26 @@
+#root {
+    -fx-background-image: url("images/backgroundpic.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.buttoon {
+	-fx-background-color : black;
+	-fx-border-color : purple; 
+	-fx-pref-width : 150px;
+	-fx-padding : 5;
+	-fx-text-fill : white;
+	
+}
+
+#addpanel{
+	-fx-background-color : #fdf5e2;
+	-fx-border-color : black; 
+	-fx-border-radius: 9px;
+}
+
+#headingbox {
+    -fx-background-color: #d3d3d3;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 0 0 2px 0;
+}
